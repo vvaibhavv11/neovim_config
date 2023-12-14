@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+
+
+echo "do you have some kind of config install already on you system?"
+echo -n "if yes insert 1 if no insert 0 : "
+
+read -r answer
+case "$answer" in
+    1)
+        sudo rm -rf ~/.config/nvim
+        sudo rm -rf ~/.local/share/nvim
+        mkdir -p ~/.config/nvim
+        cp -r -t ~/.config/nvim "$PWD/lua" "$PWD/init.lua" "$PWD/after"
+        nvim
+    ;;
+
+    0)
+        sudo rm -rf ~/.config/nvim
+        mkdir -p ~/.config/nvim
+        cp -r -t ~/.config/nvim "$PWD/lua" "$PWD/init.lua" "$PWD/after"
+        nvim
+    ;;
+
+    *)
+        echo "Invalid input. Please enter 0 or 1."
+    ;;
+esac
+
