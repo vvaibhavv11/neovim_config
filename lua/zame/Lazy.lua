@@ -23,7 +23,7 @@ require("lazy").setup({
     },
     --color scheme
     { "ellisonleao/gruvbox.nvim", priority = 1000 , config = true, opts = ...},
-
+     
     -- copilot
     {
         'Exafunction/codeium.vim',
