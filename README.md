@@ -31,3 +31,35 @@ For Windows:
 cd .\neovim_config\installation
 windows_intall.bat
 ```
+
+## Quick start
+Here a table that describes the keybindings for neovim
+leader key is <space>
+
+# commmon operations in neovim
+
+| command | description |
+|---------|-------------|
+| :w | save file |
+| :wq | save and quit |
+| :q | quit |
+| :q! | quit without save |
+| :wq! | save and quit without save |
+| :set autochdir | auto change directory |
+
+
+# keybindings
+| keybinding | description |
+|------------|-------------|
+| <leader>ff | open telescope |
+| <leader>l | in visual mode copy to system clipboard |
+| <leader>fm | toggle file explorer |
+| <c-e> | open harpoon |
+| <leader>a | add a file to harpoon |
+| <c-a> | first file in harpoon |
+| <c-s> | second file in harpoon |
+| <c-d> | third file in harpoon |
+| <c-f> | fourth file in harpoon |
+| <c-\> | toggle terminal |
+| s | jump to anyword in a buffer by flash plugin |
+
