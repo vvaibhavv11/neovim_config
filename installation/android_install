@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+sudo rm -rf ~/.config/nvim
+sudo rm -rf ~/.local/share/nvim
+mkdir -p ~/.config/nvim
+cp -r -t ~/.config/nvim "$PWD/lua" "$PWD/init.lua" "$PWD/after"
+nvim
