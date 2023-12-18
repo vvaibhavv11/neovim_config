@@ -3,5 +3,5 @@
 rm -rf ~/.config/nvim
 rm -rf ~/.local/share/nvim
 mkdir -p ~/.config/nvim
-cp -r -t ~/.config/nvim "$PWD/lua" "$PWD/init.lua" "$PWD/after"
+cp -r -t ~/.config/nvim "~/neovim_config/lua" "~/neovim_config/init.lua" "~/neovim_config/after"
 nvim
