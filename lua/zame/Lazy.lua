@@ -32,7 +32,7 @@ require("lazy").setup({
     
     { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
     {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},
-    { "ThePrimeagen/harpoon" },
+    { "ThePrimeagen/harpoon", branch = "harpoon2" },
     { "mbbill/undotree" },
     { "tpope/vim-fugitive" },
     {'akinsho/toggleterm.nvim', version = "*", config = true},
@@ -80,6 +80,7 @@ require("lazy").setup({
         -- stylua: ignore
         keys = {
             { "s", mode = { "n", "x", "o" }, function() require("flash").jump() end, desc = "Flash" },
+            { "m", mode = { "n", "x", "o" }, function() require("flash").jump_and_replace() end, desc = "Flash jump_and_replace" },
             { "S", mode = { "n", "x", "o" }, function() require("flash").treesitter() end, desc = "Flash Treesitter" },
             { "r", mode = "o", function() require("flash").remote() end, desc = "Remote Flash" },
             { "R", mode = { "o", "x" }, function() require("flash").treesitter_search() end, desc = "Treesitter Search" },
