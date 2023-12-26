@@ -29,12 +29,27 @@ require("lazy").setup({
         'Exafunction/codeium.vim',
         event = 'BufEnter'
     },
-    
+
+    --comment
+    {'numToStr/Comment.nvim', event = "VeryLazy", opts = {}},
+
+
+    --indent line 
     { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
+    
+    --treesitter
     {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},
+    
+    --harpoon to navigate between files
     { "ThePrimeagen/harpoon", branch = "harpoon2" },
+
+    --undotree to undo changes
     { "mbbill/undotree" },
+
+    --fugitive for git
     { "tpope/vim-fugitive" },
+
+    --toggleterm to open terminal
     {'akinsho/toggleterm.nvim', version = "*", config = true},
     
     --lualine

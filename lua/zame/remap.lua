@@ -21,3 +21,5 @@ vim.keymap.set('i', '<c-x>', function() return vim.fn['codeium#Clear']() end, { 
 
 -- NvimTree
 vim.keymap.set("n", "<leader>fm", ":NvimTreeToggle<CR>")
+
+--symbole-outline

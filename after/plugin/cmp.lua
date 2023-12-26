@@ -9,11 +9,11 @@ if not snip_status_ok then
 end
 
 local kind_icons = {
-    Text = "󰉿",
+  Text = "󰉿",
 	Method = "󰆧",
 	Function = "󰊕",
 	Constructor = "",
-    Field = " ",
+  Field = " ",
 	Variable = "󰀫",
 	Class = "󰠱",
 	Interface = "",
@@ -23,17 +23,17 @@ local kind_icons = {
 	Value = "󰎠",
 	Enum = "",
 	Keyword = "󰌋",
-    Snippet = "",
+  Snippet = "",
 	Color = "󰏘",
 	File = "󰈙",
-    Reference = "",
+  Reference = "",
 	Folder = "󰉋",
 	EnumMember = "",
 	Constant = "󰏿",
-    Struct = "",
+  Struct = "",
 	Event = "",
 	Operator = "󰆕",
-    TypeParameter = " ",
+  TypeParameter = " ",
 	Misc = " ",
 }
 
@@ -43,7 +43,7 @@ cmp.setup {
             luasnip.lsp_expand(args.body) -- For `luasnip` users.
         end,
     },
-
+    
     mapping = {
         ['<C-p>'] = cmp.mapping.select_prev_item(),
         ['<C-n>'] = cmp.mapping.select_next_item(),

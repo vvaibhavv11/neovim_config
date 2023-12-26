@@ -3,6 +3,7 @@ require("gruvbox").setup({
   terminal_colors = true, -- add neovim terminal colors
   undercurl = true,
   underline = true,
+  icons_enabled = true,
   bold = true,
   italic = {
     strings = true,
