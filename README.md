@@ -22,7 +22,8 @@ after that install the plugins and open neovim
 
 For Linux(may require sudo):
 ```
-chmod u+x ./neovim_config/installation/linux_intall
+cd neovim_config
+chmod u+x ./linux_intall
 ./neovim_config/installation/linux_intall
 ```
 
