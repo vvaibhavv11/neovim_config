@@ -24,12 +24,12 @@ For Linux(may require sudo):
 ```
 cd neovim_config
 chmod u+x ./linux_install
-./linux_intall
+./linux_install
 ```
 
 For Windows:
 ```
-cd .\neovim_config\installation
+cd .\neovim_config
 windows_intall.bat
 ```
 
