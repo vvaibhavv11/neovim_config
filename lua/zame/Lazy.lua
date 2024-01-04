@@ -33,6 +33,12 @@ require("lazy").setup({
     --comment
     {'numToStr/Comment.nvim', event = "VeryLazy", opts = {}},
 
+    --hardtime
+    {
+        "m4xshen/hardtime.nvim",
+        dependencies = { "MunifTanjim/nui.nvim", "nvim-lua/plenary.nvim" },
+        opts = {}
+    },
 
     --indent line 
     { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
