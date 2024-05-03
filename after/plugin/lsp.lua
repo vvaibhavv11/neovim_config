@@ -15,6 +15,8 @@ lsp_zero.on_attach(function(client, bufnr)
   vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
 end)
 
+lsp_zero.setup_servers({'dartls', force = true})
+
 require('mason').setup({})
 require('mason-lspconfig').setup({
   ensure_installed = {'tsserver', 'rust_analyzer', 'clangd', 'cssls', 'html', 'htmx', 'gopls', 'pylsp', 'lua_ls', 'astro', 'bashls',},

@@ -14,10 +14,12 @@ vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])
 vim.g.codeium_disable_bindings = 1
 
 -- keymaps for codeium copilot 
-vim.keymap.set('i', '<c-l>', function() return vim.fn['codeium#Accept']() end, { expr = true })
-vim.keymap.set('i', '<c-;>', function() return vim.fn['codeium#CycleCompletions'](1) end, { expr = true })
-vim.keymap.set('i', '<c-,>', function() return vim.fn['codeium#CycleCompletions'](-1) end, { expr = true })
-vim.keymap.set('i', '<c-x>', function() return vim.fn['codeium#Clear']() end, { expr = true })
+-- vim.keymap.set('i', '<c-l>', function() return vim.fn['codeium#Accept']() end, { expr = true })
+-- vim.keymap.set("n", "<c-k>", ":Codeium Disable<CR>")
+-- vim.keymap.set("n", "<c-p>", ":Codeium Enable<CR>")
+-- vim.keymap.set('i', '<c-;>', function() return vim.fn['codeium#CycleCompletions'](1) end, { expr = true })
+-- vim.keymap.set('i', '<c-,>', function() return vim.fn['codeium#CycleCompletions'](-1) end, { expr = true })
+-- vim.keymap.set('i', '<c-x>', function() return vim.fn['codeium#Clear']() end, { expr = true })
 
 -- NvimTree
 vim.keymap.set("n", "<leader>fm", ":NvimTreeToggle<CR>")

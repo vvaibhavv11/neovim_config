@@ -1,8 +1,8 @@
-  local opts = {
+local opts = {
     enabled = true,
     indent = {
-      char = '|',
+        char = '|',
     },
-  }
+}
 
-  require("ibl").setup(opts)
+require("ibl").setup(opts)
