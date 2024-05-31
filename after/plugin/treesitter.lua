@@ -9,7 +9,7 @@ require'nvim-treesitter.configs'.setup {
     -- Recommendation: set to false if you don't have `tree-sitter` CLI installed locally
     auto_install = true,
 
-    -- syntax of templ
+    -- syntax of templ, blade
     vim.filetype.add({
         extension = {
             templ = "templ",

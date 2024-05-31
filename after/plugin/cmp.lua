@@ -1,11 +1,11 @@
 local cmp_status_ok, cmp = pcall(require, "cmp")
 if not cmp_status_ok then
-  return
+    return
 end
 
 local snip_status_ok, luasnip = pcall(require, "luasnip")
 if not snip_status_ok then
-  return
+    return
 end
 
 local kind_icons = {
@@ -88,8 +88,8 @@ cmp.setup {
             border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
         },
     },
-  experimental = {
-    ghost_text = false,
-    native_menu = false,
-  },
+    experimental = {
+        ghost_text = false,
+        native_menu = false,
+    },
 }
