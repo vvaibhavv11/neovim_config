@@ -1,8 +1,9 @@
-local opts = {
+require("ibl").setup(
+{
     enabled = true,
     indent = {
         char = '|',
     },
 }
+)
 
-require("ibl").setup(opts)

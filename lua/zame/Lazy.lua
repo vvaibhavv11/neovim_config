@@ -51,6 +51,11 @@ require("lazy").setup({
 		dependencies = { "nvim-tree/nvim-web-devicons", opt = true },
 	},
 
+    --for the eww
+    {
+        "elkowar/yuck.vim"
+    },
+
 	--nvim-tree
 	{
 		"nvim-tree/nvim-tree.lua",
@@ -106,5 +111,17 @@ require("lazy").setup({
 	--for linters
 	{
 		"mfussenegger/nvim-lint",
+	},
+
+	--for surround
+	{
+		"kylechui/nvim-surround",
+		version = "*", -- Use for stability; omit to use `main` branch for the latest features
+		event = "VeryLazy",
+		config = function()
+			require("nvim-surround").setup({
+				-- Configuration here, or leave empty to use defaults
+			})
+		end,
 	},
 })
