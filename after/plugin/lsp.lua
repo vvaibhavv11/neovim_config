@@ -1,7 +1,7 @@
 local lsp_zero = require('lsp-zero')
 
 lsp_zero.on_attach(function(client, bufnr)
-    local opts = {buffer = bufnr, remap = false}
+    local opts = { buffer = bufnr, remap = false }
 
     vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
     vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end, opts)
@@ -15,11 +15,35 @@ lsp_zero.on_attach(function(client, bufnr)
     vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
 end)
 
-lsp_zero.setup_servers({'dartls', force = true})
+lsp_zero.setup_servers({ 'dartls', force = true })
+require('lspconfig').tailwindcss.setup({
+    settings = {
+        tailwindCSS = {
+            classAttributes = { "class", "className", "class:list", "classList", "ngClass" },
+            includeLanguages = {
+                eelixir = "html-eex",
+                eruby = "erb",
+                htmlangular = "html",
+                templ = "html",
+                rust = "html"
+            },
+            lint = {
+                cssConflict = "warning",
+                invalidApply = "error",
+                invalidConfigPath = "error",
+                invalidScreen = "error",
+                invalidTailwindDirective = "error",
+                invalidVariant = "error",
+                recommendedVariantOrder = "warning"
+            },
+            validate = true
+        }
+    }
+})
 
 require('mason').setup({})
 require('mason-lspconfig').setup({
-    ensure_installed = {'rust_analyzer', 'clangd', 'cssls', 'html', 'htmx', 'gopls', 'pylsp', 'lua_ls', 'astro', 'bashls',},
+    ensure_installed = { 'rust_analyzer', 'clangd', 'cssls', 'html', 'gopls', 'pylsp', 'ts_ls', 'lua_ls', 'astro', 'bashls', },
     handlers = {
         lsp_zero.default_setup,
         lua_ls = function()
@@ -28,4 +52,3 @@ require('mason-lspconfig').setup({
         end,
     }
 })
-
